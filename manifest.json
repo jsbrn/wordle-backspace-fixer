@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "Wordle Backspace Fixer",
+  "version": "1.0",
+
+  "description": "Stops the backspace button from leaving the page in Firefox :)",
+
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/games/wordle/index.html"],
+      "js": ["fix.js"],
+      "all_frames": true
+    }
+  ]
+
+}
